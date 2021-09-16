@@ -70,71 +70,71 @@
 // 
 // export default Input
 
-import React, { useState } from 'react';
-
-const Input = () => {
-
-    const [text, setText] = useState('');
-    const [inputText, setinputText] = useState('');
-    const [mode, setmode] = useState('view');
-
-    const handleChange = (e) => {
-        setinputText(e)
-        console.log('inputText', inputText)
-        // this.setState({ inputText: e.target.value });
-    }
-
-    const handleSave = () => {
-        console.log("text", text)
-        console.log("inputtext", inputText)
-        setText(text)
-        setinputText(inputText)
-        setmode('view')
-
-        // this.setState({ text: this.state.inputText, mode: 'view' });
-    }
-
-    const handleEdit = () => {
-        setmode('edit')
-        // this.setState({ mode: 'edit' });
-    }
-    const RenderInput = () => {
-        if (mode === 'view') {
-            return <div></div>;
-        } else {
-            return (
-                <p>
-                    <input
-                        onChange={handleChange}
-                        value={inputText}
-                    />
-                </p>
-            );
-        }
-    }
-
-    const renderButton = () => {
-        if (mode === 'view') {
-            return (
-                <button onClick={handleEdit}>
-                    Edit
-                </button>
-            );
-        } else {
-            return (
-                <button onClick={handleSave}>
-                    Save
-                </button>
-            );
-        }
-    }
-    return (
-        <div>
-            <p>Text: {text}</p>
-            {RenderInput()}
-            {renderButton()}
-        </div>
-    );
-}
-
-export default Input;
+// import React, { useState } from 'react';
+// 
+// const Input = () => {
+// 
+//     const [text, setText] = useState('');
+//     const [inputText, setinputText] = useState('');
+//     const [mode, setmode] = useState('view');
+// 
+//     const handleChange = (e) => {
+//         setinputText(e)
+//         console.log('inputText', inputText)
+//         // this.setState({ inputText: e.target.value });
+//     }
+// 
+//     const handleSave = () => {
+//         console.log("text", text)
+//         console.log("inputtext", inputText)
+//         setText(text)
+//         setinputText(inputText)
+//         setmode('view')
+// 
+//         // this.setState({ text: this.state.inputText, mode: 'view' });
+//     }
+// 
+//     const handleEdit = () => {
+//         setmode('edit')
+//         // this.setState({ mode: 'edit' });
+//     }
+//     const RenderInput = () => {
+//         if (mode === 'view') {
+//             return <div></div>;
+//         } else {
+//             return (
+//                 <p>
+//                     <input
+//                         onChange={handleChange}
+//                         value={inputText}
+//                     />
+//                 </p>
+//             );
+//         }
+//     }
+// 
+//     const renderButton = () => {
+//         if (mode === 'view') {
+//             return (
+//                 <button onClick={handleEdit}>
+//                     Edit
+//                 </button>
+//             );
+//         } else {
+//             return (
+//                 <button onClick={handleSave}>
+//                     Save
+//                 </button>
+//             );
+//         }
+//     }
+//     return (
+//         <div>
+//             <p>Text: {text}</p>
+//             {RenderInput()}
+//             {renderButton()}
+//         </div>
+//     );
+// }
+// 
+// export default Input;
